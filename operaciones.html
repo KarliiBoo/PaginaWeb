@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="es">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Operaciones - Conjuntos</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Forum&display=swap" rel="stylesheet">
+    <script src="app.js" defer></script>
+</head>
+
+<body>
+    <header class="container">
+        <h1 class="title">Conjuntos</h1>
+        <p class="sub">
+            Aprende con ejemplos, visualiza operaciones y revisa tu conocimiento con un mini cuestionario.
+        </p>
+        <nav class="nav">
+            <a href="proyecto_Mate.html">Inicio</a>
+            <a href="video.html">Video</a>
+            <a href="teoria.html">Teoría</a>
+            <a href="tipos-de-conjuntos.html">Tipos de conjuntos</a>
+            <a href="operaciones.html">Operaciones</a>
+            <a href="propiedades.html">Propiedades</a>
+            <a href="quiz.html">Cuestionario</a>
+            
+        </nav>
+    </header>
+
+    <main class="container">
+        <!-- OPERACIONES -->
+        <section id="operaciones" class="card">
+            <h4 class="subtitle"> Operaciones con conjuntos (Interactivo)</h4>
+
+            <div class="inputs">
+                <div class="field">
+                    <label for="setA">Conjunto A (separa por comas)</label>
+                    <input id="setA" type="text" value="1,2,3" />
+                </div>
+
+                <div class="field">
+                    <label for="setB">Conjunto B (separa por comas)</label>
+                    <input id="setB" type="text" value="3,4,5" />
+                </div>
+            </div>
+
+            <div class="btnRow">
+                <button data-op="union">Unión (A ∪ B)</button>
+                <button data-op="intersect">Intersección (A ∩ B)</button>
+                <button data-op="diffAB">Diferencia (A − B)</button>
+                <button data-op="diffBA">Diferencia (B − A)</button>
+                <button data-op="symDiff">Diferencia Simétrica (A Δ B)=(A - B) ∪ (B - A)</button>  
+                <button data-op="complementA">Complemento de A (A')</button>
+            </div>
+
+            <div class="resultGrid">
+                <div class="resultBox">
+                    <h4>Resultado</h4>
+                    <div id="result" class="result">—</div>
+                </div>
+
+                <div class="resultBox">
+                    <h4>Diagrama de Venn</h4>
+                    <div id="vennDiagram" class="vennContainer">
+                        <svg id="vennSVG" width="250" height="250" viewBox="0 0 250 250"></svg>
+                    </div>
+                </div>
+
+                <div class="resultBox">
+                    <h3>
+                        Código MATLAB
+                        <span class="matlabBadge" data-badge="matlab">
+                            MATLAB
+                            <span class="bubble">
+                                Aquí se muestra el código equivalente en MATLAB (no se ejecuta).
+                            </span>
+                        </span>
+                    </h3>
+                    <pre><code id="matlabCode">—</code></pre>
+                </div>
+            </div>
+
+            <div class="note">
+                <b>Nota:</b> La página calcula con JavaScript, pero te enseña el equivalente en MATLAB.
+            </div>
+        </section>
+
+        <footer class="footer">
+            <small>
+                Proyecto publicado con GitHub Pages — Conjuntos
+            </small>
+              <div class="authors">
+                <h4>Creado por:</h4>
+                <ul class="author-list">
+                    <li>Dominique Vallejo</li>
+                    <li>Heidy Cruz</li>
+                    <li>Karla Amores</li>
+                    <li>Melany Taco</li>
+                    <li>Fernando Bolaños</li>
+                </ul>
+            </div>
+        </footer>
+    </main>
+</body>
+
+</html>

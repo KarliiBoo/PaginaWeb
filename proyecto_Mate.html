@@ -19,151 +19,64 @@
             Aprende con ejemplos, visualiza operaciones y revisa tu conocimiento con un mini cuestionario.
         </p>
         <nav class="nav">
-            <a href="#teoria">Teoría</a>
-            <a href="#tipos-de-conjuntos">Tipos de conjuntos</a>
-            <a href="#operaciones">Operaciones</a>
-            <a href="#propiedades">Propiedades</a>
-            <a href="#quiz">Cuestionario</a>
-            <a href="#video">Video</a>
+            <a href="proyecto_Mate.html">Inicio</a>
+            <a href="video.html">Video</a>
+             <a href="teoria.html">Teoría</a>
+            <a href="tipos-de-conjuntos.html">Tipos de conjuntos</a>
+            <a href="operaciones.html">Operaciones</a>
+            <a href="propiedades.html">Propiedades</a>
+            <a href="quiz.html">Cuestionario</a>
         </nav>
     </header>
 
     <main class="container">
-        <!-- TEORIA -->
-        <section id="teoria" class="card">
-            <h2 class="subtitle"> ¿Qué es un conjunto?</h2>
-            <p>
-            Un <b>conjunto</b> es una colección o agrupación bien definida de objetos, llamados elementos, que tienen alguna característica en común. 
-            Estos objetos pueden ser concretos (como personas o cosas) o abstractos (como números, ideas o relaciones).  
-            <p>Se suele escribir entre llaves, por ejemplo: A = {1, 2, 3}.</p>
-            </p>
+        <div class="main-wrapper">
+            <!-- CONTENIDO PRINCIPAL -->
+            <section class="main-content">
+                <!-- PÁGINA DE INICIO -->
+                <section class="card">
+                    <div class="card-header">
+                        <div class="card-headline">
+                            <h2 class="subtitle">Bienvenido</h2>
+                            <p class="lead">¿Listo para explorar la teoría de conjuntos de forma interactiva?</p> <p></p> Usa el menú para comenzar tu recorrido.</p>
+                        </div>
+                    </div>
 
-            <div class="grid2">
-                <div>
-                    <h3>Ejemplos rápidos</h3>
-                    <ul>
-                        <li><b>A</b> = {1, 2, 3}</li>
-                        <li><b>B</b> = {3, 4, 5}</li>
-                        <li><b>C</b> = {a, e, i, o, u}</li>
-                    </ul>
+                    <div class="card-body">
+                        <ul class="feature-list">
+                            <li><a href="video.html">Video</a>: Mira un video explicativo sobre nuestra página web.</li>
+                            <li><a href="teoria.html">Teoría</a>: Aprende qué es un conjunto con ejemplos visuales.</li>
+                            <li><a href="tipos-de-conjuntos.html">Tipos de conjuntos</a>: Descubre los diferentes tipos de conjuntos.</li>
+                            <li><a href="operaciones.html">Operaciones</a>: Realiza operaciones interactivas y visualiza diagramas de Venn.</li>
+                            <li><a href="propiedades.html">Propiedades</a>: Estudia las propiedades matemáticas de los conjuntos.</li>
+                            <li><a href="quiz.html">Cuestionario</a>: Prueba tu conocimiento con un cuestionario de 10 preguntas.</li>
+                        </ul>
+                    </div>
+                </section>
+            </section>
 
-                    <p class="tip">
-                        Tip: En conjuntos, <b>no importa el orden</b> y <b>no se repiten</b> elementos.
+            <!-- SIDEBAR AL LADO DERECHO -->
+            <aside class="sidebar">
+                <div class="sidebar-card">
+                    <h3 class="sidebar-title">Nuestra motivación</h3>
+                    <p>
+                        Creamos esta página web con el objetivo de facilitar el aprendizaje de la teoría de conjuntos mediante una plataforma educativa e interactiva, que permite al usuario comprender los conceptos de forma clara, visual y práctica.
                     </p>
-                </div>
-
-                <div class="imgBox">
-                    <img src="Diagramas_de_Venn.png" alt="Ejemplo de diagrama de Venn" />
-                    <small class="imgCaption">Diagrama del conjunto A.</small>
-                </div>
-            </div>
-        </section>
-        <!--TIPOS DE CONJUNTOS-->
-        <section id="tipos-de-conjuntos" class="card">
-            <h3 class="subtitle"> Tipos de conjuntos </h3>
-            <ul>
-                <li><b>Conjunto vacío (∅)</b>: No tiene elementos. Ejemplo: ∅ = { }.</li>
-                <li><b>Conjunto finito</b>: Tiene un número limitado de elementos. Ejemplo: A = {1, 2, 3}.</li>
-                <li><b>Conjunto infinito</b>: Tiene un número ilimitado de elementos. Ejemplo: Números naturales = {0, 1, 2, 3, ...}.</li>
-                <li><b>Subconjunto (⊆)</b>: Todos los elementos de un conjunto están en otro. Ejemplo: Si A = {1, 2} y B = {1, 2, 3}, entonces A ⊆ B.</li>
-                <li><b>Conjunto universal (U)</b>: Contiene todos los elementos posibles en un contexto dado.</li>
-            </ul>
-        </section>
-        <!-- OPERACIONES -->
-        <section id="operaciones" class="card">
-            <h4 class="subtitle"> Operaciones con conjuntos (Interactivo)</h4>
-
-            <div class="inputs">
-                <div class="field">
-                    <label for="setA">Conjunto A (separa por comas)</label>
-                    <input id="setA" type="text" value="1,2,3" />
-                </div>
-
-                <div class="field">
-                    <label for="setB">Conjunto B (separa por comas)</label>
-                    <input id="setB" type="text" value="3,4,5" />
-                </div>
-            </div>
-
-            <div class="btnRow">
-                <button data-op="union">Unión (A ∪ B)</button>
-                <button data-op="intersect">Intersección (A ∩ B)</button>
-                <button data-op="diffAB">Diferencia (A − B)</button>
-                <button data-op="diffBA">Diferencia (B − A)</button>
-                <button data-op="symDiff">Diferencia Simétrica (A Δ B)=(A - B) ∪ (B - A)</button>  
-                <button data-op="complementA">Complemento de A (A')</button>
-            </div>
-
-            <div class="resultGrid">
-                <div class="resultBox">
-                    <h4>Resultado</h4>
-                    <div id="result" class="result">—</div>
-                </div>
-
-                <div class="resultBox">
-                    <h4>Diagrama de Venn</h4>
-                    <div id="vennDiagram" class="vennContainer">
-                        <svg id="vennSVG" width="250" height="250" viewBox="0 0 250 250"></svg>
+                    <p>
+                        A través de recursos digitales y una navegación sencilla, se busca reforzar el estudio autónomo y mejorar la comprensión de los temas abordados.
+                    </p>
+                    <div class="objective-list">
+                        <h4>Nuestros objetivos:</h4>
+                        <ul>
+                            <li>Entender los conceptos fundamentales de conjuntos</li>
+                            <li>Visualizar operaciones mediante diagramas de Venn</li>
+                            <li>Aplicar las propiedades de conjuntos</li>
+                            <li>Evaluar el aprendizaje con cuestionarios interactivos</li>
+                        </ul>
                     </div>
                 </div>
-
-                <div class="resultBox">
-                    <h3>
-                        Código MATLAB
-                        <span class="matlabBadge" data-badge="matlab">
-                            MATLAB
-                            <span class="bubble">
-                                Aquí se muestra el código equivalente en MATLAB (no se ejecuta).
-                            </span>
-                        </span>
-                    </h3>
-                    <pre><code id="matlabCode">—</code></pre>
-                </div>
-            </div>
-
-            <div class="note">
-                <b>Nota:</b> La página calcula con JavaScript, pero te enseña el equivalente en MATLAB.
-            </div>
-        </section>
-        <!--PROPIEDADES DE  LAS OPERACIONES-->
-        <section id="propiedades" class="card">
-            <h4 class="subtitle"> Propiedades de las operaciones con conjuntos</h4>
-            <ul>
-                <li><b>Conmutativa:</b> A ∪ B = B ∪ A y A ∩ B = B ∩ A</li>
-                <li><b>Asociativa:</b> (A ∪ B) ∪ C = A ∪ (B ∪ C) y (A ∩ B) ∩ C = A ∩ (B ∩ C)</li>
-                <li><b>Distributiva:</b> A ∩ (B ∪ C) = (A ∩ B) ∪ (A ∩ C) y A ∪ (B ∩ C) = (A ∪ B) ∩ (A ∪ C)</li>
-                <li><b>Absorción:</b> A ∪ (A ∩ B) = A y A ∩ (A ∪ B) = A</li>
-                <li><b>Identidad:</b> A ∪ ∅ = A y A ∩ U = A</li>
-                <li><b>Complemento:</b> A ∪ A' = U y A ∩ A' = ∅</li>
-                <li><b>Leyes de De Morgan:</b> (A ∪ B)' = A' ∩ B' ; (A ∩ B)' = A' ∪ B' y A - B = A ∩ B'</li>
-                <li><b>Idempotente:</b> A ∪ A = A y A ∩ A = A</li>
-            </ul>
-        </section>
-        <!-- QUIZ -->
-        <section id="quiz" class="card">
-            <h3 class="subtitle"> Cuestionario (10 preguntas)</h3>
-            <p>Responde las 10 y luego presiona <b>“Revisar mis respuestas”</b> para ver puntaje y feedback.</p>
-
-            <form id="quizForm" class="quiz">
-                <!-- Las preguntas se cargan desde app.js -->
-            </form>
-
-            <div class="btnRow">
-                <button id="btnReview" type="button">Revisar mis respuestas</button>
-                <button id="btnReset" type="button" class="secondary">Reiniciar</button>
-            </div>
-
-            <div id="quizSummary" class="summary hidden"></div>
-        </section>
-
-        <!-- VIDEO SECTION -->
-        <section id="video" class="card">
-            <h3 class="subtitle">Video explicativo</h3>
-            <video width="100%" controls style="border-radius: 8px; max-width: 600px;">
-                <source src="Video_explicativo.mp4" type="video/mp4">
-                Tu navegador no soporta el elemento de video.
-            </video>
-        </section>
+            </aside>
+        </div>
 
         <footer class="footer">
             <small>
